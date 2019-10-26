@@ -1,5 +1,10 @@
 # Assignement 2
 ## Part 1 - Cross toolchains
+Kernel crosstool are a set of tools used to manipulate binaries with a different architecture than your current kernel architecture. For exemple, I'm running Linux Parrot OS with a amd64 architecture. Thanks to th kernel crosstool, I can compile or disassemble binarues from arm, mips or other architecture.
+
+[Here](https://mirrors.edge.kernel.org/pub/tools/crosstool/files/bin/x86_64/4.6.3/) is the link to get the tools for a x86_64 architecture, version 4.6.3
+
+GCC is the GNU C Compiler. This utility is used to compile C program, and with the kernel crosstool, to compile it for a given architecture. This can be usefull to craft a custom payload for a IoT device. `objdump` is used to analyse binary, and disassemble them. We can disassemble binaries from different architecture and read the assembly code to try yo understand the program in order to find vulnerabilities. `objcopy` can be used ot copy binary object into a different format. `readelf` is used to get information from a elf object file. Thanks to this, you can get the architecture, and the endianess of the binary file.
 
 ## Part 2 - Reverse engineer raw binary blobs
 ### Arch 1 - ARM
