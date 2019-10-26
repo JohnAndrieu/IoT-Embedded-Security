@@ -1,9 +1,9 @@
 # Assignement 1
 ## Part 1
 
-MQ Telemetry Transport (MQTT), invented in 1998/1999 by Arcom and IBM, is a protocol which is composed of a broker which can received/send data and clients who can both listen/send data to the broker.
+MQ Telemetry Transport (MQTT), invented in 1998/1999 by Arcom and IBM, is a protocol which is composed of a `broker` which can received/send data and `clients` who can both listen/send data to the broker.
 
-This protocol use two ports : 1883 unsecured MQQT and 8883 secured MQTT. Based on the usage of channels.
+This protocol use two ports : `1883 unsecured MQQT` and `8883 secured MQTT`. Based on the usage of `channels`.
 
 The weaknesses are : 
 
