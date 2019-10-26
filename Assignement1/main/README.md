@@ -1,6 +1,7 @@
 # Assignement 1
 ## Part 1
 
+MQ Telemetry Transport (MQTT), invented in 1998/1999 by Arcom and IBM, is a protocol which is composed of a broker which can received/send data and clients who can both listen/send data to the broker .
 Devices could be compromised
 
 ## Part 2 - Virtualbox/Ubuntu Installation and first MQTT requests
