@@ -1,5 +1,5 @@
 # Assignement 1
-## Part 1
+## Part 1 - MQTT security weaknesses, features and types of affected system
 
 MQ Telemetry Transport (MQTT), invented in 1998/1999 by Arcom and IBM, is a protocol which is composed of a `broker` which can received/send data and `clients` who can both listen/send data to the broker.
 
