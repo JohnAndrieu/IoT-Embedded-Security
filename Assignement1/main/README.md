@@ -1,6 +1,8 @@
 # Assignement 1
 ## Part 1
 
+Devices could be compromised
+
 ## Part 2 - Virtualbox/Ubuntu Installation and first MQTT requests
 On a linux machine, just install VirtualBox with `apt`
 ```
