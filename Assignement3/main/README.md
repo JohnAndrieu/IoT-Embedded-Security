@@ -110,3 +110,20 @@ The `/etc/passwd` and `/etc/shadow` are broken symbolic links to `/tmp/config/..
 tree -pa > ../../firm2list.txt
 find -type f -exec sha1sum {} \; > ../../firm2listhash.txt
 ```
+
+The `/etc/version` contains the following information
+```
+v1.13EU v5.0.0EUb3_patch02 --  Thu Sep 15 17:11:01 CST 2011
+```
+
+We can find a `www` directory, with a lot of web files.
+
+When borwsing throught the `www` directory, we can find some graphic assests, and a `model.gif` 
+
+![alt](img/model.gif)
+
+Let's google this... 
+
+![alt](img/dlink1.png)
+
+This firmware seems to come from a [D-Link DIR-100 router](https://eu.dlink.com/uk/en/products/dir-100-ethernet-broadband-router)
