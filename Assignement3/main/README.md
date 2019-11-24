@@ -91,10 +91,14 @@ The `/etc/passwd` and `/etc/shadow` are broken symbolic links to `/tmp/config/..
 
  The architecture seems to be a `MIPS32`.
 
+ The extraction seems greate, we can find a lot of interesting file, from known linux folder such as /bin /etc. However we can see some broken symbolic link. For example, `/sbin/net-util` does not exist.
+
  We can try to find some CVE/exploit on the internet
 
  - [Here](https://www.contextis.com/en/blog/porting-exploits-netgear-wnr2200) is a nice article on the WNR2200 firmware analysis.
- - 
+ - [An exploit](https://www.exploit-db.com/exploits/33177) is available here, may be this firmware is vulnerable.
+ - [Other CVE](https://www.cvedetails.com/bugtraq-bid/95867/Netgear-WNR2000-Multiple-Security-Vulnerabilities.html) cn be found here, but are for an older firmware version.
+ - [Here](https://www.cvedetails.com/version-search.php?vendor=Netgear&product=Wnr2000%25&version=1%25) is a list of vulnerabilities for WNR2000 router. Most of them are for older firmware.
 
  ### firmware.bix
 
@@ -127,3 +131,15 @@ Let's google this...
 ![alt](img/dlink1.png)
 
 This firmware seems to come from a [D-Link DIR-100 router](https://eu.dlink.com/uk/en/products/dir-100-ethernet-broadband-router)
+
+We can see there is less file in this firmware. For example, `/var` folder is empty. `/bin` contains less programs than the previous firmware also. Maybe the extraction is not complete.
+
+- There is 3 vulnerabilities for Dir-100 on [CVE details](https://www.cvedetails.com/vulnerability-list/vendor_id-899/product_id-14956/D-link-Dir-100.html)
+- We can find [this one](https://securitytracker.com/id/1020825) but for an older firmware.
+- [Bruteforce and CSRF](https://seclists.org/fulldisclosure/2017/Jun/30)
+- [This vulnerability](https://vuldb.com/?id.10693) seems to affect our firmware version 1.13/5.0.0EUb patch 2. CVSS 8.8 so it is really critical!
+- We can find a CVSS2.0 10 [here](https://nvd.nist.gov/vuln/detail/CVE-2013-6026). The version is not mentioned
+
+### Conslusion
+
+`Binwalk` is a really powerfull tool to extract files. We have found some file such as programs, and web server. With this we have found the version of the firmwares. However, this is not easy to find vulnerability that are compatible with the firmware version. Most of the vulnerabilities found are for older firmware, and sometimes the version is not mentioned. However, we can find some article and search on this firmwares.
