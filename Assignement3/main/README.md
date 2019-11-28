@@ -2,9 +2,46 @@
 
 ## Part 1 - Scrapers
 ### Scrapy
+
+To install scrapy:
 ```bash
-pip3 install  Scarpy
+pip install scarpy
 ```
+Clone the firmadyne git repository:
+```bash
+git clone https://github.com/firmadyne/scraper.git
+```
+
+Then go to the top of the project folder:
+```bash
+cd scraper
+```
+
+Begin to scrape the vendors' websites to find firmwares:
+```bash
+scrapy crawl 360
+```
+```bash
+scrapy crawl buffalo
+```
+```bash
+scrapy crawl linksys 
+```
+I stopped the above scrapper before the end because it download a huge amount of firmwares.
+
+```bash
+scrapy crawl mercury
+```
+```bash
+scrapy crawl microstrain
+```
+```bash
+scrapy crawl phicomm 
+```
+
+I also stopped the above scrapper before the end for the same reasons as linksys.
+
+However, some of the scrapers did not work (dlink, asus, airlink101, belkin, etc.). Due to the fact that the project is not up-to-date.
 
 ## Part 2 - binwalk
 `Binwalk` is already install with ParrotOS. Current version is 2.2.0
