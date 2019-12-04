@@ -29,5 +29,11 @@ To build a Debian MIPS image on QEMU I followed this tutorial: https://markuta.c
 
 ### 2b) Architecture2 = M68K
 
-To set up Debian/m68k on qemu-system-m68k I followed this tutorial https://wiki.debian.org/M68k/QemuSystemM68k
+To set up Debian/m68k on qemu-system-m68k I followed this tutorial https://wiki.debian.org/M68k/QemuSystemM68k but in the list of the machine availables I don't have q800:
+
+Thus, I tryed the other machines availables but I got error every time:
+
+I also tryed to change the console parameter to follow the tutorial given in the documentation:
+
+Still the same error. I also tryed to purge and reinstall qemu but it did not work.
 
