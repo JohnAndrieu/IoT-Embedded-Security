@@ -5,7 +5,7 @@
 
 To install scrapy:
 ```bash
-pip install scarpy
+pip install scrapy
 ```
 Clone the firmadyne git repository:
 ```bash
