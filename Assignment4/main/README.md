@@ -2,7 +2,7 @@
 
 ## 1. Have QEMU setup and well running
 
-On Kali's VM to install qemu run the following command:
+On Kali's VM we will install the following qemu packages by running these commands:
 
 ```bash
 apt-get install qemu-system*
