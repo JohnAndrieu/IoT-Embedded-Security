@@ -19,4 +19,6 @@ apt-get install qemu-user-static
 ```bash
 apt-get install qemu-user-binfm
 ```
+![check-version-qemu](img/check-version-qemu.png)
+
 
