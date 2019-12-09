@@ -45,3 +45,35 @@ I also tryed to change the console parameter to follow the tutorial given in the
 
 Still the same error. I also tryed to purge and reinstall qemu but it did not work.
 
+## 3.
+### Stack-Protected
+
+#### simple run
+![](img/stackprotected-simple.png)
+
+#### strace
+ ![](img/stackprotected-strace.png)
+
+### gdb
+![](img/stackprotected-gdb.png)
+
+We can see the protection on the stack throw a SIGIOT signal to end the process once the stack is trying to be written
+
+### Stack-Unprotected
+
+#### simple run
+![](img/stackunprotected-simple.png)
+
+#### strace
+![](img/stackunprotected-strace.png)
+
+#### gdb
+![](img/stackunprotected-gdb.png)
+We can see the address that has been tryied to be reach is 0x41414140, which is 'AAA@'. Those are the characters that has been copyied, and not the return address.
+
+When we run the program with unprotected stack, `strncpy` will overwrite the stack and overwrite the return address. Therefore, when trying to return to the previous contex, the process will try to read a unaccessible address that lead to a Segmentation Fault (SIGSEV).
+
+
+
+`gcc` provide a lot of debugging options ([see there](https://gcc.gnu.org/onlinedocs/gcc/Debugging-Options.html)). This options are really useful while debugging, to place breakpoints on source code lines for example.
+`gdb` is a well know GNU C debugger. It can start the process of your application, freeze it and execute it step by step while looking at the variables, stack and heap.
