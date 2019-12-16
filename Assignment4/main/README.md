@@ -29,13 +29,13 @@ To build a Debian MIPS image on QEMU I followed this tutorial: https://markuta.c
 
 After following each step of the tutorial we have a our mips machine:
 
-
+![](img/mips.png)
 
 ### 2b) Architecture2 = M68K
 
 To set up Debian/m68k on qemu-system-m68k I followed this tutorial https://wiki.debian.org/M68k/QemuSystemM68k 
 
-## 3.
+## 3. Stack overflow vulnerable program in natively emulated QEMU envrironment
 ### Stack-Protected
 
 #### simple run
