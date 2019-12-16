@@ -31,6 +31,8 @@ After following each step of the tutorial we have a our mips machine:
 
 ![](img/mips.png)
 
+Just be carefull with the kernel version and the init file.
+
 ### 2b) Architecture2 = M68K
 
 To set up Debian/m68k on qemu-system-m68k I followed this tutorial https://wiki.debian.org/M68k/QemuSystemM68k 
