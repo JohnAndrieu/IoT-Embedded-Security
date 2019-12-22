@@ -19,7 +19,7 @@ If a try to ssh directely after the QEMU booted, this makes my entire computer c
 ```bash
 service ssh status
 ```
-This does not really seem to resolve the problem.
+This does not really seem to resolve the problem. I also tried to restart the ssh server... It's kind of coin flip...
 
 ## Part 2 - Simulate firmware
 ### QEMU process running (in QEMU)
