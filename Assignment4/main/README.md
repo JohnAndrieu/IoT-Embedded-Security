@@ -27,25 +27,21 @@ apt-get install qemu-user-binfm
 
 To build a Debian MIPS image on QEMU I followed this tutorial: https://markuta.com/how-to-build-a-mips-qemu-image-on-debian/ which is more recent than the one proposed in the documentation of the task.
 
+After following each step of the tutorial we have a our mips machine:
+
+![](img/mips.png)
+
+Just be carefull with the kernel version and the init file.
+
 ### 2b) Architecture2 = M68K
 
-To set up Debian/m68k on qemu-system-m68k I followed this tutorial https://wiki.debian.org/M68k/QemuSystemM68k but in the list of the machine availables I don't have q800:
+To set up Debian/m68k on qemu-system-m68k I followed this tutorial https://wiki.debian.org/M68k/QemuSystemM68k 
 
-![list-machines](img/list-machine.png)
+After following each step of the tutorial we have a our mips machine:
 
-Thus, I tryed the other machines availables but I got error every time:
+![](img/m68k.png)
 
-![first-machine-error](img/machine-an-error.png)
-
-![second-machine-error](img/machine-mcf.png)
-
-I also tryed to change the console parameter to follow the tutorial given in the documentation:
-
-![second-machine-and-console-error](img/machine-an-error.png)
-
-Still the same error. I also tryed to purge and reinstall qemu but it did not work.
-
-## 3.
+## 3. Stack overflow vulnerable program in natively emulated QEMU envrironment
 ### Stack-Protected
 
 #### simple run
